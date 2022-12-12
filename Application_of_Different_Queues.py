@@ -96,9 +96,26 @@ print("First element you entered:", lifo2.pop())
 # Representing Priority Queues With a Heap
 from heapq import heappush
 
+print("\n         * * * Priority Queues With A Heap * * *             \n")
+print("This is the first test of Priority Queue with Heap (heappush)")
 fruits = []
-heappush(fruits, "orange")
-heappush(fruits, "apple")
-heappush(fruits, "banana")
+heappush(fruits, "Orange")
+heappush(fruits, "Apple")
+heappush(fruits, "Banana")
+print("This is the list of fruits:", fruits)
 
-print(fruits)
+# Apply heappush with user input
+print("\nThis is the second test of Priority Queue with Heap (heappush) and user input")
+fruit_input = []
+fruit_inp1 = input("Please enter the first fruit: ")
+fruit_inp2 = input("Please enter the second fruit: ")
+fruit_inp3 = input("Please enter the third fruit: ")
+heappush(fruit_input, fruit_inp1)
+heappush(fruit_input, fruit_inp2)
+heappush(fruit_input, fruit_inp3)
+print("This is the list of fruits you entered:", fruit_input)
+
+from heapq import heappop
+print("\nThis is the first test of Priority Queue with Heap (heappop)")
+print("The fruit to be popped/removed from the list:", heappop(fruits))
+print("This is the final list of fruits:", fruits)
