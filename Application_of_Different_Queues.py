@@ -110,6 +110,7 @@ fruit_input = []
 fruit_inp1 = input("Please enter the first fruit: ")
 fruit_inp2 = input("Please enter the second fruit: ")
 fruit_inp3 = input("Please enter the third fruit: ")
+
 heappush(fruit_input, fruit_inp1)
 heappush(fruit_input, fruit_inp2)
 heappush(fruit_input, fruit_inp3)
@@ -119,3 +120,8 @@ from heapq import heappop
 print("\nThis is the first test of Priority Queue with Heap (heappop)")
 print("The fruit to be popped/removed from the list:", heappop(fruits))
 print("This is the final list of fruits:", fruits)
+
+print("\nThis is the second test of Priority Queue with Heap (heappop) and user input")
+print("The fruit to be popped/removed from the list:", heappop(fruit_input))
+print("This is the final list of fruits:", fruit_input)
+
