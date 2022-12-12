@@ -137,3 +137,14 @@ print("Third Person Details:", person3)
 print("Should the first person go before the second person?:", person1 < person2)
 print("Should the second person go before the third person?:", person2 < person3)
 
+
+# Building A Priority Queue Data Type
+from collections import deque
+from heapq import heappush, heappop
+
+
+class PriorityQueue:
+    def __init__(self):
+        self._elements = []
+
+
