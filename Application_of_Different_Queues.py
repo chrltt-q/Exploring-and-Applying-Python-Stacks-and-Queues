@@ -116,6 +116,7 @@ heappush(fruit_input, fruit_inp2)
 heappush(fruit_input, fruit_inp3)
 print("This is the list of fruits you entered:", fruit_input)
 
+# Apply heappop
 from heapq import heappop
 print("\nThis is the first test of Priority Queue with Heap (heappop)")
 print("The fruit to be popped/removed from the list:", heappop(fruits))
@@ -124,4 +125,15 @@ print("This is the final list of fruits:", fruits)
 print("\nThis is the second test of Priority Queue with Heap (heappop) and user input")
 print("The fruit to be popped/removed from the list:", heappop(fruit_input))
 print("This is the final list of fruits:", fruit_input)
+
+# Apply tuples
+print("\nThis is the first test of Tuple's Comparison")
+person1 = ("John", "Brown", 42)
+person2 = ("John", "Doe", 42)
+person3 = ("John", "Doe", 24)
+print("First Person Details:", person1)
+print("Second Person Details:", person2)
+print("Third Person Details:", person3)
+print("Should the first person go before the second person?:", person1 < person2)
+print("Should the second person go before the third person?:", person2 < person3)
 
