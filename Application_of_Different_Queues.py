@@ -71,7 +71,21 @@ class Stack(Queue):
 
 # Test the LIFO Queue
 print("\nThis is the first test of LIFO Queue")
-lifo = Stack("1st element", "2nd element", "3rd element")
+lifo1 = Stack("1st element", "2nd element", "3rd element")
 
-for element in lifo:
+for element in lifo1:
     print(element)
+
+# Apply LIFO Queue with list and user input
+print("\nThis is the second test of LIFO Queue")
+lifo2 = []
+L_input1 = input("Please enter the first element you want to add: ")
+L_input2 = input("Please enter the second element you want to add: ")
+L_input3 = input("Please enter the third element you want to add: ")
+lifo2.append(L_input1)
+lifo2.append(L_input2)
+lifo2.append(L_input3)
+
+print("Third element you entered:", lifo2.pop())
+print("Second element you entered:", lifo2.pop())
+print("First element you entered:", lifo2.pop())
