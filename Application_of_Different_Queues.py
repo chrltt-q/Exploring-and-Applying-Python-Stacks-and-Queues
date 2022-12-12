@@ -200,15 +200,24 @@ class Message:
 
 wipers = Message("Windshield wipers turned on")
 hazard_lights = Message("Hazard lights turned on")
+brake_pedal = Message("Brake pedal depressed")
 
 messages = PriorityQueue2()
 messages.enqueue_with_priority(Critical, wipers)
 messages.enqueue_with_priority(Important, hazard_lights)
 messages.enqueue_with_priority(Critical, Message("ABS engaged"))
+messages.enqueue_with_priority(Critical, brake_pedal)
 
-print("* The windshield wipers and ABS engaged are now critical events *\n"
-      "* The hazard lights are now important event *")
+
+print("* Priority order set in the program *"
+      "\n  (1) Windshield wipers"
+      "\n  (2) ABS engaged"
+      "\n  (3) Brake pedal"
+      "\n  (4) Hazard lights\n")
 
 print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
+print(messages.dequeue())
+
+
