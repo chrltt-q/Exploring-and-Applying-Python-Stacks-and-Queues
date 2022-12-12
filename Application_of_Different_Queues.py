@@ -6,6 +6,7 @@ print("*** Sir Danilo Madrigalejos ***\n")
 from collections import deque
 
 
+# Building a Queue Data Type
 class Queue:
     def __init__(self, *elements):
         self._elements = deque(elements)
@@ -24,7 +25,7 @@ class Queue:
         return self._elements.popleft()
 
 
-# Test the class Queue
+# Test the class FIFO Queue
 fifo1 = Queue()
 fifo1.enqueue("1st element")
 fifo1.enqueue("2nd element")
@@ -60,3 +61,17 @@ while True:
     break
 
 print("Length or Number of Elements:", len(fifo3))
+
+
+# Building A Stack Data Type
+class Stack(Queue):
+    def dequeue(self):
+        return self._elements.pop()
+
+
+# Test the LIFO Queue
+print("\nThis is the first test of LIFO Queue")
+lifo = Stack("1st element", "2nd element", "3rd element")
+
+for element in lifo:
+    print(element)
