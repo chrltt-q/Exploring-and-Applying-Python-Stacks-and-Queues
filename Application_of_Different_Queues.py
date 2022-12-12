@@ -43,3 +43,18 @@ for element in fifo2:
 
 print(len(fifo2)) # This will display 0 since the elements in the loop were consumed
 
+# Apply the class Queue with input from user
+input1 = input("Please enter the first element you want to add: ")
+input2 = input("Please enter the second element you want to add: ")
+input3 = input("Please enter the third element you want to add: ")
+
+fifo3 = Queue(input1, input2, input3)
+print(len(fifo3))
+num_input = 1
+while True:
+    for element in fifo3:
+        print("Input No. "f"{num_input}:", element)
+        num_input = num_input + 1
+    break
+
+print(len(fifo3))
