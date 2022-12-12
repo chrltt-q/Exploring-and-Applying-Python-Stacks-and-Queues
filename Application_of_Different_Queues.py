@@ -25,10 +25,21 @@ class Queue:
 
 
 # Test the class Queue
-fifo = Queue("1st", "2nd", "3rd")
-print(len(fifo))
+fifo1 = Queue()
+fifo1.enqueue("1st")
+fifo1.enqueue("2nd")
+fifo1.enqueue("3rd")
 
-for element in fifo:
+print(fifo1.dequeue())
+print(fifo1.dequeue())
+print(fifo1.dequeue())
+
+
+fifo2 = Queue("1st", "2nd", "3rd")
+print(len(fifo2))
+
+for element in fifo2:
     print(element) # This will print every element inside the variable fifo
 
-print(len(fifo)) # This will display 0 since the elements in the loop were consumed
+print(len(fifo2)) # This will display 0 since the elements in the loop were consumed
+
