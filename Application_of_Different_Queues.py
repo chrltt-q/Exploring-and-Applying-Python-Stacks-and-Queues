@@ -171,3 +171,13 @@ print("Priority Message:", messages.dequeue())
 print("Priority Message:", messages.dequeue())
 
 
+print("\n * * * Handling Corner Cases in the Priority Queue * * *     \n")
+from collections import deque
+from heapq import heappush, heappop
+from itertools import count
+
+
+class PriorityQueue2:
+    def __init__(self):
+        self._elements = []
+        self._counter = count()
