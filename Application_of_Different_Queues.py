@@ -158,3 +158,11 @@ print("\n         * * * Priority Queue Data Type * * *             \n")
 Critical = 3
 Important = 2
 Neutral = 1
+print("This is the first test of Priority Queue Data Type")
+messages = PriorityQueue()
+messages.enqueue_with_priority(Important, "Windshield wipers turned on")
+messages.enqueue_with_priority(Neutral, "Radio station tuned in")
+messages.enqueue_with_priority(Critical, "Brake pedal depressed")
+messages.enqueue_with_priority(Important, "Hazard lights turned on")
+print("This will display the lowest priority:", messages.dequeue())
+
