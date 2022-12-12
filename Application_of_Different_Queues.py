@@ -164,5 +164,10 @@ messages.enqueue_with_priority(Important, "Windshield wipers turned on")
 messages.enqueue_with_priority(Neutral, "Radio station tuned in")
 messages.enqueue_with_priority(Critical, "Brake pedal depressed")
 messages.enqueue_with_priority(Important, "Hazard lights turned on")
-print("This will display the lowest priority:", messages.dequeue())
+print("* Priority Messages from Critical to Neutral *")
+print("Priority Message:", messages.dequeue())
+print("Priority Message:", messages.dequeue())
+print("Priority Message:", messages.dequeue())
+print("Priority Message:", messages.dequeue())
+
 
