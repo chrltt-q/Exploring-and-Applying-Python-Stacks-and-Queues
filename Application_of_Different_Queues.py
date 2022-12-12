@@ -26,6 +26,7 @@ class Queue:
 
 
 # Test the class FIFO Queue
+print("\n           * * * Queue Data Type * * *               \n")
 fifo1 = Queue()
 fifo1.enqueue("1st element")
 fifo1.enqueue("2nd element")
@@ -70,7 +71,8 @@ class Stack(Queue):
 
 
 # Test the LIFO Queue
-print("\nThis is the first test of LIFO Queue")
+print("\n           * * * Stack Data Type * * *               \n")
+print("This is the first test of LIFO Queue")
 lifo1 = Stack("1st element", "2nd element", "3rd element")
 
 for element in lifo1:
@@ -89,3 +91,14 @@ lifo2.append(L_input3)
 print("Third element you entered:", lifo2.pop())
 print("Second element you entered:", lifo2.pop())
 print("First element you entered:", lifo2.pop())
+
+
+# Representing Priority Queues With a Heap
+from heapq import heappush
+
+fruits = []
+heappush(fruits, "orange")
+heappush(fruits, "apple")
+heappush(fruits, "banana")
+
+print(fruits)
