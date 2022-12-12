@@ -5,6 +5,7 @@ print("*** Sir Danilo Madrigalejos ***\n")
 
 from collections import deque
 
+
 class Queue:
     def __init__(self, *elements):
         self._elements = deque(elements)
@@ -21,3 +22,8 @@ class Queue:
 
     def dequeue(self):
         return self._elements.popleft()
+
+
+# Test the class Queue
+fifo = Queue("1st", "2nd", "3rd")
+print(len(fifo))
