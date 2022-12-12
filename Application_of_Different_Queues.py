@@ -181,3 +181,34 @@ class PriorityQueue2:
     def __init__(self):
         self._elements = []
         self._counter = count()
+
+    def enqueue_with_priority(self, priority, value):
+        element = (-priority, next(self._counter), value)
+        heappush(self._elements, element)
+
+    def dequeue(self):
+        return heappop(self._elements)[-1]
+
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Message:
+    Priority_event: str
+
+
+wipers = Message("Windshield wipers turned on")
+hazard_lights = Message("Hazard lights turned on")
+
+messages = PriorityQueue2()
+messages.enqueue_with_priority(Critical, wipers)
+messages.enqueue_with_priority(Important, hazard_lights)
+messages.enqueue_with_priority(Critical, Message("ABS engaged"))
+
+print("* The windshield wipers and ABS engaged are now critical events *\n"
+      "* The hazard lights are now important event *")
+
+print(messages.dequeue())
+print(messages.dequeue())
+print(messages.dequeue())
