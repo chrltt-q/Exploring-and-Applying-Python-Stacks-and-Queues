@@ -29,6 +29,6 @@ fifo = Queue("1st", "2nd", "3rd")
 print(len(fifo))
 
 for element in fifo:
-    print(element)
+    print(element) # This will print every element inside the variable fifo
 
-print(len(fifo))
+print(len(fifo)) # This will display 0 since the elements in the loop were consumed
