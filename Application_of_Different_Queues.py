@@ -6,8 +6,18 @@ print("*** Sir Danilo Madrigalejos ***\n")
 from collections import deque
 
 
+# Refactoring the Code Using A Mixin Class
+class IterableMixin:
+    def __len__(self):
+        return len(self._elements)
+
+    def __iter__(self):
+        while len(self) > 0:
+            yield self.dequeue()
+
+
 # Building a Queue Data Type
-class Queue:
+class Queue(IterableMixin):
     def __init__(self, *elements):
         self._elements = deque(elements)
 
@@ -143,7 +153,7 @@ from collections import deque
 from heapq import heappush, heappop
 
 
-class PriorityQueue:
+class PriorityQueue(IterableMixin):
     def __init__(self):
         self._elements = []
 
@@ -177,7 +187,7 @@ from heapq import heappush, heappop
 from itertools import count
 
 
-class PriorityQueue2:
+class PriorityQueue2(IterableMixin):
     def __init__(self):
         self._elements = []
         self._counter = count()
@@ -219,5 +229,3 @@ print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
-
-
