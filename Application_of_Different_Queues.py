@@ -152,3 +152,9 @@ class PriorityQueue:
 
     def dequeue(self):
         return heappop(self._elements)
+
+
+print("\n         * * * Priority Queue Data Type * * *             \n")
+Critical = 3
+Important = 2
+Neutral = 1
