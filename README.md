@@ -9,4 +9,9 @@
 # The Application of Different Queues
 ''' About: This program includes implementing Queue data type, Stack data type, Priority Queues with Heap, Tuples, Priority Queue data type, and Refactor using Mixin class. '''
 
+# Working With Thread-Safe Queues - FIFO & LIFO
+'''This program includes implementing Thread-Safe Queues, particularly in FIFO Queue and LIFO Queue. '''
+
+# Working With Thread-Safe Queues - PriorityQueue
+'''This program includes implementing Thread-Safe Queues, particularly in PriorityQueue. '''
 
