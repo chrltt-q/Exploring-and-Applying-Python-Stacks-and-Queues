@@ -5,6 +5,8 @@ import threading
 from random import randint
 from time import sleep
 
+from random import choice, randint
+
 print("******** PROGRAMMED BY ********")
 print("****** Charlotte Quezada ******")
 print("********** BSCOE 2-2 **********")
@@ -84,3 +86,5 @@ class Worker(threading.Thread):
         for _ in range(100):
             sleep(delay / 100)
             self.progress += 1
+
+
