@@ -60,12 +60,6 @@ def parse_args():
     return parser.parse_args()
 
 
-if __name__ == "__main__":
-    try:
-        main(parse_args())
-    except KeyboardInterrupt:
-        pass
-
 PRODUCTS = (
     ":balloon:",
     ":cookie:",
@@ -115,28 +109,6 @@ class Worker(threading.Thread):
             self.progress += 1
 
 
-class Producer(Worker):
-    def __init__(self, speed, buffer, products):
-        super().__init__(speed, buffer)
-        self.products = products
-
-    def run(self):
-        while True:
-            self.product = choice(self.products)
-            self.simulate_work()
-            self.buffer.put(self.product)
-            self.simulate_idle()
-
-
-class Consumer(Worker):
-    def run(self):
-        while True:
-            self.product = self.buffer.get()
-            self.simulate_work()
-            self.buffer.task_done()
-            self.simulate_idle()
-
-
 class View:
     def __init__(self, buffer, producers, consumers):
         self.buffer = buffer
@@ -183,3 +155,32 @@ class View:
             padding + worker.state, align="left", vertical="middle"
         )
         return Panel(align, height=5, title=title)
+
+
+class Producer(Worker):
+    def __init__(self, speed, buffer, products):
+        super().__init__(speed, buffer)
+        self.products = products
+
+    def run(self):
+        while True:
+            self.product = choice(self.products)
+            self.simulate_work()
+            self.buffer.put(self.product)
+            self.simulate_idle()
+
+
+class Consumer(Worker):
+    def run(self):
+        while True:
+            self.product = self.buffer.get()
+            self.simulate_work()
+            self.buffer.task_done()
+            self.simulate_idle()
+
+
+if __name__ == "__main__":
+    try:
+        main(parse_args())
+    except KeyboardInterrupt:
+        pass
