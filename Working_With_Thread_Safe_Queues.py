@@ -22,6 +22,11 @@ QUEUE_TYPES = {
 def main(args):
     buffer = QUEUE_TYPES[args.queue]()
 
+    producers = [
+        Producer(args.producer_speed, buffer, PRODUCTS)
+        for _ in range(args.producers)
+    ]
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
