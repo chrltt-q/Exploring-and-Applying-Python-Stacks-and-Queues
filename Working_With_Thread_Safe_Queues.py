@@ -88,3 +88,8 @@ class Worker(threading.Thread):
             self.progress += 1
 
 
+class Producer(Worker):
+    def __init__(self, speed, buffer, products):
+        super().__init__(speed, buffer)
+        self.products = products
+
