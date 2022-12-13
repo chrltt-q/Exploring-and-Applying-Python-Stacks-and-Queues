@@ -198,6 +198,12 @@ class Priority(IntEnum):
     LOW = 3
 
 
+PRIORITIZED_PRODUCTS = (
+    Product(Priority.HIGH, ":1st_place_medal:"),
+    Product(Priority.MEDIUM, ":2nd_place_medal:"),
+    Product(Priority.LOW, ":3rd_place_medal:"),
+)
+
 if __name__ == "__main__":
     try:
         main(parse_args())
