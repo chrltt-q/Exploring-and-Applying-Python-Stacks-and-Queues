@@ -27,6 +27,11 @@ def main(args):
         for _ in range(args.producers)
     ]
 
+    consumers = [
+        Consumer(args.consumer_speed, buffer) for _ in range(args.consumers)
+    ]
+
+
 
 def parse_args():
     parser = argparse.ArgumentParser()
