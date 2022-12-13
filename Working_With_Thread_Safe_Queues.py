@@ -1,11 +1,11 @@
+import argparse
+from queue import LifoQueue, PriorityQueue, Queue
+import threading
+
 print("******** PROGRAMMED BY ********")
 print("****** Charlotte Quezada ******")
 print("********** BSCOE 2-2 **********")
 print("*** Sir Danilo Madrigalejos ***\n")
-
-
-import argparse
-from queue import LifoQueue, PriorityQueue, Queue
 
 QUEUE_TYPES = {
     "fifo": Queue,
@@ -51,8 +51,6 @@ PRODUCTS = (
     ":thread:",
     ":yo-yo:",
 )
-
-import threading
 
 
 class Worker(threading.Thread):
