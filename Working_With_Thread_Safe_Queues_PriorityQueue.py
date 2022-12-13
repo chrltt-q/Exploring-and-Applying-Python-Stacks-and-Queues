@@ -192,6 +192,12 @@ class Product:
         return self.label
 
 
+class Priority(IntEnum):
+    HIGH = 1
+    MEDIUM = 2
+    LOW = 3
+
+
 if __name__ == "__main__":
     try:
         main(parse_args())
