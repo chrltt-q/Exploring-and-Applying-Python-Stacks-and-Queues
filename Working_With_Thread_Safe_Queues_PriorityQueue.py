@@ -16,6 +16,9 @@ from rich.console import Group
 from rich.live import Live
 from rich.panel import Panel
 
+from dataclasses import dataclass, field
+from enum import IntEnum
+
 print("******** PROGRAMMED BY ********")
 print("****** Charlotte Quezada ******")
 print("********** BSCOE 2-2 **********")
