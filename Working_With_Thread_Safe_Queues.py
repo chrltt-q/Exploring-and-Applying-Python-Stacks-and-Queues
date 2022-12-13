@@ -2,6 +2,9 @@ import argparse
 from queue import LifoQueue, PriorityQueue, Queue
 import threading
 
+from random import randint
+from time import sleep
+
 print("******** PROGRAMMED BY ********")
 print("****** Charlotte Quezada ******")
 print("********** BSCOE 2-2 **********")
