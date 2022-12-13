@@ -7,6 +7,14 @@ from time import sleep
 
 from random import choice, randint
 
+from itertools import zip_longest
+
+from rich.align import Align
+from rich.columns import Columns
+from rich.console import Group
+from rich.live import Live
+from rich.panel import Panel
+
 print("******** PROGRAMMED BY ********")
 print("****** Charlotte Quezada ******")
 print("********** BSCOE 2-2 **********")
@@ -28,9 +36,18 @@ def main(args):
     ]
 
     consumers = [
-        Consumer(args.consumer_speed, buffer) for _ in range(args.consumers)
+        Consumer(args.consumer_speed, buffer)
+        for _ in range(args.consumers)
     ]
 
+    for producer in producers:
+        producer.start()
+
+    for consumer in consumers:
+        consumer.start()
+
+    view = View(buffer, producers, consumers)
+    view.animate()
 
 
 def parse_args():
