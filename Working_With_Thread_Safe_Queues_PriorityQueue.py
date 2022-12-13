@@ -1,3 +1,4 @@
+# This program implements the use of Thread-Safe in PriorityQueue
 import argparse
 from queue import LifoQueue, PriorityQueue, Queue
 import threading
