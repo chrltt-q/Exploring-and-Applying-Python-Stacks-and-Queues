@@ -183,6 +183,12 @@ class Consumer(Worker):
             self.simulate_idle()
 
 
+@dataclass(order=True)
+class Product:
+    priority: int
+    label: str = field(compare=False)
+
+
 if __name__ == "__main__":
     try:
         main(parse_args())
