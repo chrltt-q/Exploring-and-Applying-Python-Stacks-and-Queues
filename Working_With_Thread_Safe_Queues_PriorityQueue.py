@@ -188,6 +188,9 @@ class Product:
     priority: int
     label: str = field(compare=False)
 
+    def __str__(self):
+        return self.label
+
 
 if __name__ == "__main__":
     try:
