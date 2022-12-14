@@ -10,7 +10,7 @@
 ''' About: This program includes implementing Queue data type, Stack data type, Priority Queues with Heap, Tuples, Priority Queue data type, and Refactor using Mixin class. '''
 
 # Working With Thread-Safe Queues - FIFO And LIFO
-'''This program includes implementing Thread-Safe Queues, particularly in FIFO Queue and LIFO Queue. Note: When testing to run the LIFO Queue, go over to the def parse_args() and change the default to lifo. '''
+'''This program includes implementing Thread-Safe Queues, particularly in FIFO Queue and LIFO Queue.    Note: When testing to run the LIFO Queue, go over to the def parse_args() and change the default to lifo. '''
 
 # Working With Thread-Safe Queues - PriorityQueue
 '''This program includes implementing Thread-Safe Queues, particularly in PriorityQueue. '''
